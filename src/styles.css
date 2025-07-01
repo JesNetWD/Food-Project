@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@import "tailwindcss";
+
+/* .card {
+  @apply bg-white rounded overflow-hidden shadow-md relative;
+} */
+
+/* .badge {
+  @apply bg-red-500 text-xs font-bold uppercase rounded-full p-2 absolute top-0 ml-2 mt-2;
+} */
+
+@layer components {
+  .card {
+    background-color: white;
+    overflow: hidden;
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    position: relative;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .badge {
+    background-color: oklch(63.7% 0.237 25.331);
+    color: white;
+    font-weight: bold;
+    border-radius: calc(infinity * 1px);
+    position: absolute;
+    top: 0;
+    margin-left: calc(var(--spacing) * 2);
+    margin-top: calc(var(--spacing) * 2);
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: calc(var(--spacing) * 2);
+  }
+}
+
+@layer components {
+  .btn {
+    border-radius: calc(infinity * 1px);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-inline: calc(var(--spacing) * 2);
+    padding-block: calc(var(--spacing) * 2);
+    letter-spacing: var(--tracking-wider);
+  }
+}
